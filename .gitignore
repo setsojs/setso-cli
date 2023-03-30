@@ -1,0 +1,6 @@
+# Node Modules
+node_modules
+
+# Bundle to not add usless code to the git repo
+/bundle
+/build

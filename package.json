@@ -1,0 +1,45 @@
+{
+  "name": "setso-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bundle/bundle.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm build-fast && node .",
+    "build": "pnpm prepare && tsc && rollup -c && rimraf build",
+    "build-fast": "tsc && rollup -c && rimraf build",
+    "go": "pnpm build && pnpm publish",
+    "lint": "eslint src --fix",
+    "check": "prettier src --check",
+    "format": "prettier src --write",
+    "prepare": "pnpm format && pnpm lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chiogen/rollup-plugin-terser": "^7.1.3",
+    "@types/chalk-animation": "^1.6.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.15.11",
+    "@types/prompts": "^2.4.3",
+    "@types/which-pm-runs": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "rollup": "^3.20.2",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "chalk-animation": "^2.0.3",
+    "execa": "^7.1.1",
+    "inquirer": "^9.1.5",
+    "just-kebab-case": "^4.2.0",
+    "nanospinner": "^1.1.0",
+    "which-pm-runs": "^1.1.0"
+  }
+}
