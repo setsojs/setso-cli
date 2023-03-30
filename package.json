@@ -1,7 +1,11 @@
 {
   "name": "setso-cli",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Cli to create setso projects with vite",
+  "homepage": "https://github.com/setsojs/setso-cli",
+  "repository": {
+    "url": "https://github.com/setsojs/setso-cli.git"
+  },
   "main": "./bundle/bundle.js",
   "type": "module",
   "bin": {
