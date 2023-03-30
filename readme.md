@@ -11,4 +11,3 @@ npm init create-setso@latest
 ## License
 
 [MIT](./LICENSE)
-g
