@@ -23,5 +23,31 @@ LOREM IMPUS DOLOR
 LOREM IMPUS DOLOR 
     `
     );
+    await writeFile("./readme.md", `
+# Welcome to setso + vite
+
+> If you already know how to use setso, you can skip this document.
+
+## What is this
+
+This is the recommended template to start using setso with vite.
+
+## Installation
+
+"""bash
+git clone https://github.com/sesto/template
+"""
+
+## Available commands
+
+### "dev"
+
+"""shell
+npm run dev
+"""
+
+Start the vite server.
+
+`.replaceAll('"', '`'))
     spin.success();
 }
