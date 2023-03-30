@@ -23,7 +23,9 @@ LOREM IMPUS DOLOR
 LOREM IMPUS DOLOR 
     `
     );
-    await writeFile("./readme.md", `
+    await writeFile(
+        "./readme.md",
+        `
 # Welcome to setso + vite
 
 > If you already know how to use setso, you can skip this document.
@@ -48,6 +50,7 @@ npm run dev
 
 Start the vite server.
 
-`.replaceAll('"', '`'))
+`.replaceAll('"', "`")
+    );
     spin.success();
 }
