@@ -1,12 +1,22 @@
+// Imports
+// Import chalkAnimations for animating text in rainbow form
 import chalkAnimation from "chalk-animation";
-import { askNameOfApp } from "./utils/askNameOfApp.js";
-import { sleep } from "./utils/sleep.js";
+// Import kebab case to do what it says
 import kebab from "just-kebab-case";
-import { getPm } from "./utils/getPm.js";
-import { mkDirAndInit } from "./utils/mkDirAndInit.js";
-import { initDirs } from "./utils/initDirs.js";
+// Import argv to get args cli
 import { argv } from "process";
+// Import askNameOfApp to prompt for the app name
+import { askNameOfApp } from "./utils/askNameOfApp.js";
+// Import sleep to sleep for x number of seconds
+import { sleep } from "./utils/sleep.js";
+// Import getPm to get the package manager that is being used
+import { getPm } from "./utils/getPm.js";
+// Import mkDirAndINit to create the directory and initilize the project with npm
+import { mkDirAndInit } from "./utils/mkDirAndInit.js";
+// Import initilize dirs to create basic directorys
+import { initDirs } from "./utils/initDirs.js";
 
+// We get the package manager
 const pm = getPm();
 
 const animation = chalkAnimation.rainbow("Welcome to the setso cli!");
