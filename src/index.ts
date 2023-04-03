@@ -5,6 +5,7 @@ import kebab from "just-kebab-case";
 import { getPm } from "./utils/getPm.js";
 import { mkDirAndInit } from "./utils/mkDirAndInit.js";
 import { initDirs } from "./utils/initDirs.js";
+import { argv } from "process";
 
 const pm = getPm();
 
@@ -14,7 +15,13 @@ animation.start();
 await sleep(1000);
 animation.stop();
 
-const response = kebab(await askNameOfApp());
+let response;
+
+if (argv[2] !== undefined) {
+  response = kebab(argv[2])
+} else {
+  response = kebab(await askNameOfApp());
+}
 
 await mkDirAndInit(pm, response);
 await initDirs();
