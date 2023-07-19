@@ -1,5 +1,5 @@
 {
-  "name": "setso-cli",
+  "name": "create-setso",
   "version": "0.1.0",
   "description": "Cli to create setso projects with vite",
   "homepage": "https://github.com/setsojs/setso-cli",

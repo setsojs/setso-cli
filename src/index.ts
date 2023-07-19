@@ -19,17 +19,25 @@ import { initDirs } from "./utils/initDirs.js";
 // We get the package manager
 const pm = getPm();
 
+// Initilize an animation
 const animation = chalkAnimation.rainbow("Welcome to the setso cli!");
 
+// Start it
 animation.start();
+// Wait 1 second
 await sleep(1000);
+// Stop it
 animation.stop();
 
+// Respones (witch is the name of the app)
 let response;
 
+// If the argv is not undefined
 if (argv[2] !== undefined) {
+  // Take that argument
   response = kebab(argv[2])
 } else {
+  // Prompt for the name of the app
   response = kebab(await askNameOfApp());
 }
 
